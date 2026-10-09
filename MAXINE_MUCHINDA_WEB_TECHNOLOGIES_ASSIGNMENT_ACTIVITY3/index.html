@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maxine Muchinda's interactive student portfolio for ICT251 Web Technologies at Mulungushi University.">
+    <title>Maxine Muchinda | ICT251 Student Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Introductory area -->
+    <header id="hero">
+        <h1>Maxine Muchinda</h1>
+        <p class="hero-programme">Computer Science student &middot; Mulungushi University &middot; ICT251 Web Technologies</p>
+        <p class="hero-intro">
+            I am learning to build websites that are clear, responsive and useful.
+            This portfolio shows what I have made so far, from my first HTML page to
+            a live, interactive site.
+        </p>
+        <div class="hero-actions">
+            <a class="btn" href="#projects">View My Projects</a>
+            <a class="btn btn-outline" href="#contact">Contact Me</a>
+        </div>
+        <p class="header-contact">
+            &#9742; 0765692555 &nbsp;|&nbsp; &#9993; maxwellmuchinda@gmail.com
+        </p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#projects">Projects</a>
+        <a href="#plan">My Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+        <button type="button" id="theme-toggle" class="theme-btn">Switch to dark theme</button>
+    </nav>
+
+    <main id="main">
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Maxine Muchinda, and I am a Computer Science student at
+                Mulungushi University. I am passionate about technology and the way the web
+                connects people, ideas, and opportunities across the world. You can reach me
+                on 0765692555 or by email at maxwellmuchinda@gmail.com. This website is part
+                of my ICT251 Web Technologies coursework, and building it is teaching me how
+                HTML gives a page structure while CSS gives it personality. I enjoy learning by
+                doing, so every activity pushes me to write real code and see real results in
+                the browser. In the future, I hope to become a skilled web developer who can
+                design websites that are attractive, responsive, and useful to my community in
+                Zambia. When I am not coding, you will find me on the football pitch, following
+                a Formula 1 race, or playing chess with friends. Thank you for visiting my page!
+            </p>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul class="hobby-list">
+                <li>&#9917; Football &ndash; playing and watching the beautiful game with friends</li>
+                <li>&#128187; Coding &ndash; building small projects and solving problems with code</li>
+                <li>&#127950; Formula 1 &ndash; following the races, drivers and team strategies</li>
+                <li>&#9822; Playing chess &ndash; sharpening my mind one move at a time</li>
+                <li>&#128300; Research on technological advancements &ndash; keeping up with the latest tech news and innovations</li>
+            </ul>
+        </section>
+
+        <!-- Projects and skills: used by the JavaScript search / filter feature -->
+        <section id="projects" class="content-section">
+            <h2>Projects and Skills</h2>
+            <p>These are the projects I have completed and the skills each one taught me. Search by keyword or pick a topic to narrow the list.</p>
+
+            <form id="project-filter" class="filter-bar" role="search" aria-label="Filter projects">
+                <div class="filter-field">
+                    <label for="project-search">Search projects:</label>
+                    <input type="search" id="project-search" name="project-search" placeholder="e.g. selectors, forms">
+                </div>
+                <div class="filter-field">
+                    <label for="project-category">Topic:</label>
+                    <select id="project-category" name="project-category">
+                        <option value="all">All topics</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="deployment">Publishing</option>
+                    </select>
+                </div>
+                <button type="button" id="project-reset" class="btn-secondary">Reset</button>
+            </form>
+
+            <p id="project-status" class="status-line" aria-live="polite"></p>
+
+            <div class="project-grid" id="project-grid">
+                <article class="project-card" data-category="html">
+                    <span class="tag">HTML</span>
+                    <h3>Activity 1: My First Web Page</h3>
+                    <p>I built my first page with headings, paragraphs, lists and links. I learned how semantic tags such as header, nav, main and footer give a page a clear structure.</p>
+                </article>
+                <article class="project-card" data-category="css">
+                    <span class="tag">CSS</span>
+                    <h3>Activity 2: Styled Personal Website</h3>
+                    <p>I added an external stylesheet with element, class and id selectors. I practised the box model with padding, margins and borders, and styled a table, a photo gallery and a form.</p>
+                </article>
+                <article class="project-card" data-category="css">
+                    <span class="tag">CSS</span>
+                    <h3>Responsive Layout with Flexbox</h3>
+                    <p>I used Flexbox and a media query so the navigation and photos fit both phone and computer screens without sideways scrolling.</p>
+                </article>
+                <article class="project-card" data-category="javascript">
+                    <span class="tag">JavaScript</span>
+                    <h3>Activity 3: Interactive Features</h3>
+                    <p>I wrote JavaScript to validate a form, switch themes, browse photos and filter this project list. I learned to use functions, events and DOM updates.</p>
+                </article>
+                <article class="project-card" data-category="deployment">
+                    <span class="tag">Publishing</span>
+                    <h3>GitHub and Render Deployment</h3>
+                    <p>I uploaded my site to GitHub with clear commit messages and published it as a static site on Render so anyone can open it with a link.</p>
+                </article>
+            </div>
+
+            <p id="project-empty" class="empty-message" hidden></p>
+        </section>
+
+        <section id="plan" class="content-section">
+            <h2>My Learning Plan</h2>
+            <p>Here are the realistic steps I will take this term to improve my web development skills:</p>
+            <ol>
+                <li>Practise HTML and CSS for at least one hour every day by rebuilding small page layouts.</li>
+                <li>Complete every ICT251 lab and activity on time, then improve each one with extra styling.</li>
+                <li>Study free tutorials on MDN Web Docs and build one small personal project each month.</li>
+                <li>Ask classmates and my lecturer for feedback and fix the mistakes they point out.</li>
+            </ol>
+            <p>
+                My main learning resource:
+                <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">MDN Web Docs &ndash; Learn Web Development</a>
+            </p>
+
+            <h3>Weekly Web Learning Timetable</h3>
+            <div class="table-wrap">
+                <table>
+                    <caption>My weekly plan for learning web technologies</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Practice Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>HTML structure and semantic tags</td>
+                            <td>Build a page with header, nav, main and footer</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>CSS selectors and the box model</td>
+                            <td>Style a page using class, id and element selectors</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Responsive design with Flexbox</td>
+                            <td>Make a photo gallery fit a phone screen</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Revision and a mini project</td>
+                            <td>Rebuild one favourite website section from scratch</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Gallery viewer: JavaScript shows one figure at a time. Without JavaScript all three stay visible. -->
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+            <div class="gallery" id="gallery">
+                <div class="gallery-stage">
+                    <figure class="gallery-item">
+                        <img src="images/photo2.jpg" width="999" height="1500" alt="Maxine dressed in a green suit and tie standing in front of a glass door">
+                        <figcaption>Dressed up for a special occasion in my green suit.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="images/photo3.jpg" width="963" height="1280" alt="Maxine laughing while leaning on a wall in a denim jacket and black trousers" loading="lazy">
+                        <figcaption>Casual day on campus, laughing in my denim jacket.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="images/photo4.jpg" width="810" height="1080" alt="Maxine wearing a grey school polo shirt and a black Energizer cap at sunset" loading="lazy">
+                        <figcaption>Golden hour in my school polo shirt and cap.</figcaption>
+                    </figure>
+                </div>
+                <div class="gallery-controls" id="gallery-controls" hidden>
+                    <button type="button" id="gallery-prev">&#8592; Previous</button>
+                    <span id="gallery-count" aria-live="polite"></span>
+                    <button type="button" id="gallery-next">Next &#8594;</button>
+                </div>
+            </div>
+            <p class="credit">All photos are my own, taken with permission of the people in them.</p>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <h3>Self-Introduction Video</h3>
+            <video controls preload="metadata">
+                <source src="videos/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="media-note">
+                <strong>Summary of the video:</strong> I introduce myself as Maxine Muchinda,
+                a Computer Science student at Mulungushi University, and I share that the web
+                skill I most hope to learn this term is building responsive layouts with CSS Flexbox.
+            </p>
+
+            <h3>Audio Clip</h3>
+            <audio controls preload="metadata">
+                <source src="videos/voice.mp3" type="audio/mpeg">
+                <source src="videos/voice.ogg" type="audio/ogg">
+                Your browser does not support the audio tag.
+            </audio>
+            <p class="media-note">
+                <strong>Summary of the audio:</strong> In this short recording I talk about my love for football and how playing the
+                game teaches me teamwork, discipline and quick thinking &ndash; skills that also
+                help me when coding and studying web technologies.
+            </p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> 0765692555</p>
+                <p><strong>Email:</strong> maxwellmuchinda@gmail.com</p>
+            </div>
+
+            <!-- novalidate: JavaScript does the checking so every error shows beside its field -->
+            <form id="contact-form" action="#" method="post" novalidate aria-labelledby="form-title">
+                <h3 id="form-title">Contact form</h3>
+                <p class="form-note"><strong>Browser demonstration only &mdash; no message is sent.</strong></p>
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="name-error">
+                <span class="error" id="name-error" aria-live="polite"></span>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                <span class="error" id="email-error" aria-live="polite"></span>
+
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic">
+                    <option value="General question">General question</option>
+                    <option value="Group project">Group project</option>
+                    <option value="Website feedback">Website feedback</option>
+                </select>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                <span class="error" id="message-error" aria-live="polite"></span>
+
+                <button type="submit">Check and Preview</button>
+                <p class="form-status" id="form-status" role="status"></p>
+            </form>
+
+            <div class="preview" id="form-preview" hidden>
+                <h3>Preview of validated details</h3>
+                <dl id="preview-list"></dl>
+                <p class="preview-note">These details passed validation in your browser. Nothing was sent or delivered.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>ICT251 Web Technologies | Activity 3 | Maxine Muchinda</p>
+        <p>0765692555 | maxwellmuchinda@gmail.com</p>
+        <p><a href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY" target="_blank" rel="noopener">View Source on GitHub</a></p>
+    </footer>
+
+</body>
+</html>
